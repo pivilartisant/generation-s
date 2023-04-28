@@ -1,0 +1,17 @@
+#root {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0rem;
+}
+
+.App{
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+
+
