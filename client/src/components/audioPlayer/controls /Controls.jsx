@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useCallback, } from "react";
 import { PlayButton } from "./controller/buttons/PlayButton";
 import { VolumeSlider } from "./controller/sliders/Volume";
 import { ReverbSlider } from "./controller/sliders/Reverb";
+import { KnobModule } from "./controller/knobs/KnobModule";
+import { ValidateButton } from "./controller/buttons/ValidateButton";
 
 //this component centralizes the audio controllers
 export const Controls = (props) => {
@@ -37,7 +39,9 @@ export const Controls = (props) => {
         {/* This is the play button component */}
         <PlayButton playing={props.isPlaying} setPlaying={props.setIsPlaying}/>
         <VolumeSlider audioRef={props.audioRef} />
-        <ReverbSlider audioRef={props.audioRef}/>
+        {/* <ReverbSlider audioRef={props.audioRef}/> */}
+        {/* <KnobModule/> */}
+        <ValidateButton  isValid={props.isValid} setIsValid={props.setIsValid}  />
       </div>
     );
   };

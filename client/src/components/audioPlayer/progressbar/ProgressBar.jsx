@@ -26,7 +26,11 @@ export const ProgressBar = (props) => {
   return (
     <div className="progress">
       {/* Shows time progression */}
-      <span className="time current">{formatTime(props.timeProgress)}</span>
+      <div className="time-progress">
+      <p className="time-current">{formatTime(props.timeProgress)} / {formatTime(props.duration)} </p>
+
+  
+      </div>
       {/* This input calls the handleProgressChange */}
       <input 
         type="range" 
@@ -36,7 +40,7 @@ export const ProgressBar = (props) => {
         onChange={handleProgressChange}
         />
         {/* Shows time max duration of track */}
-      <span className="time">{formatTime(props.duration)}</span>
+      
     </div>
   );
 };

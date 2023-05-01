@@ -1,12 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-import { InterfaceBackground } from './components/canvas/InterfaceBackground'
+import { useState } from 'react'
+import { Game } from './components/Game/Game'
+import { AudioPlayer } from './components/audioPlayer/AudioPlayer'
 
-//root of my application 
+
 function App() {
+
+  const [isValid, setIsValid] = useState(false);
+
 
   return (
     <div className="App">
-        <InterfaceBackground/>
+    <Router>
+        <Routes>
+          <Route path="/interface" element={<AudioPlayer isValid={isValid} setIsValid={setIsValid} />} />
+          <Route path="/game" element={ <Game isValid={isValid} />} />
+        </Routes>
+    </Router>
     </div>
   )
 }

@@ -7,14 +7,13 @@ import "./audioPlayer.css"
 
 //audio player where all the components are rendered and interact
 
-export const AudioPlayer = () => {
+export const AudioPlayer = (props) => {
 
     //set audio track from track.js which will eventually be pulled from the json file
     //get audio at index 0 of the tracks array of objects
     const [currentTrack, setCurrentTrack] = useState(tracks[0]);
 
     const [isPlaying, setIsPlaying] = useState(false);
-
     //sets progression of track
     const [timeProgress, setTimeProgress] = useState(0);
     //sets duration of track in the loader & sends it to the progress bar
@@ -26,6 +25,9 @@ export const AudioPlayer = () => {
     const progressBarRef = useRef();
 
     return (
+
+      <div className="interface-canvas">
+
       <div className="audio-player">
             {/* this component loads the audio track. It gets the src from currentTarck and sets it's ref.*/}
             {/*The ref will be passed in later on.*/}
@@ -45,6 +47,8 @@ export const AudioPlayer = () => {
               setTimeProgress={setTimeProgress}
               setIsPlaying={setIsPlaying}
               isPlaying={isPlaying}
+              isValid={props.isValid}
+              setIsValid={props.setIsValid}
             
             />
             {/* This component contains all the relative audio progression */}
@@ -54,6 +58,7 @@ export const AudioPlayer = () => {
               timeProgress={timeProgress}
               duration={duration}
               />
+      </div>
       </div>
     );
   };

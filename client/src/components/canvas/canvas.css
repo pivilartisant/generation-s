@@ -1,9 +1,0 @@
-.interface-canvas{
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: #0F0F0F;
-    z-index: 0;
-}

@@ -1,3 +1,14 @@
+.time-progress{
+  display: flex;
+  width: 160px;
+  padding: 5px 10px;
+  border:  solid 1px white;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+}
+
 .progress-range {
   -webkit-appearance: none; /* Removes default styling */
   width: 300px; /* Sets the width of the range slider */
@@ -6,6 +17,7 @@
   outline: none; /* Removes the outline on the range slider */
   transition: opacity 0.2s ease-in-out; /* Adds a transition effect to the opacity */
   border-radius: 5px; /* Adds rounded corners to the range slider */
+  display: none;
 }
 
 /* Styles the thumb */
