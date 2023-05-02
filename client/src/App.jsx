@@ -1,12 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-import { CheckValidation } from './components/Game/CheckValidation'
+import { CheckValidation } from './components/CheckValidation'
+import { Game } from './components/Game/Game'
 import { AudioPlayer } from './components/audioPlayer/AudioPlayer'
-
-import { useStore } from "./store";
-import { shallow } from "zustand/shallow";
-
-
 
 function App() {
 
@@ -16,7 +12,7 @@ function App() {
         <Routes>
           
           <Route path="/interface" element={<AudioPlayer  />} />
-          <Route path="/game" element={ <CheckValidation />} />
+          <Route path="/game" element={ <Game />} />
         </Routes>
     </Router>
     </div>

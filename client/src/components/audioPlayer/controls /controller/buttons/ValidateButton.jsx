@@ -15,7 +15,6 @@ export function ValidateButton () {
         <button onClick={()=>{setChoice(!choice)}}>
           Validate
         </button>
-  
       </div>
     )
 }
