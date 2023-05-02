@@ -1,14 +1,21 @@
 import "./validateButton.css"
+import { useStore } from "../../../../../store";
+import { shallow } from "zustand/shallow";
 
-export function ValidateButton (props) {
-    function handleClick () {
-        props.setIsValid(true)
-        console.log(props.isValid)
-    }
+
+export function ValidateButton () {
+    const  choice = useStore((store) => store.choice.isValid, shallow);
+    const setChoice = useStore((store)=> store.setChoice)
 
     return (
-        <button onClick={()=>handleClick()} className="validate-button">
-            Validate
+      <div>
+        <div>
+      <p> {choice ? "Choice has been made" : "Choice has not been made"} </p>
+    </div>
+        <button onClick={()=>{setChoice(!choice)}}>
+          Validate
         </button>
+  
+      </div>
     )
 }

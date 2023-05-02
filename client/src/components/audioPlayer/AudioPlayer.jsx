@@ -48,8 +48,7 @@ export const AudioPlayer = (props) => {
               setIsPlaying={setIsPlaying}
               isPlaying={isPlaying}
               isValid={props.isValid}
-              setIsValid={props.setIsValid}
-            
+              setIsValid={props.setIsValid}        
             />
             {/* This component contains all the relative audio progression */}
             <ProgressBar 

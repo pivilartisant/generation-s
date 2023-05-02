@@ -41,7 +41,7 @@ export const Controls = (props) => {
         <VolumeSlider audioRef={props.audioRef} />
         {/* <ReverbSlider audioRef={props.audioRef}/> */}
         {/* <KnobModule/> */}
-        <ValidateButton  isValid={props.isValid} setIsValid={props.setIsValid}  />
+        <ValidateButton />
       </div>
     );
   };
