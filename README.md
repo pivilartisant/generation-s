@@ -71,3 +71,7 @@ than follow the instructions and wait for the pull request to be merged.
 ![Create New Branch Screen](./readmeAssets/prInstructions.png)
 
 ![Create New Branch Screen](./readmeAssets/wait4Merge.png)
+
+=> If you struggle with github & open source collaboration we recommend the very good : 
+
+https://github.com/pivilartisant/open-pixel-art
