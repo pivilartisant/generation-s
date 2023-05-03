@@ -16,5 +16,4 @@ Run `npm install` in both /server & /client to install all the dependencies.
 
 
 ### 3. Contributing 
-This application is currenlty under development. If you want to contribute feel free to create an issue and corresponding branch.
-You also contribute to the documentation by adding to this README.md file which is a good first issue. 
+this application is currenlty under development. If you want to contribute feel free to create an issue and corresponding branch.
