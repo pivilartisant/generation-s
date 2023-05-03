@@ -7,11 +7,11 @@ let data = [];
 function loadData() {
   const contents = fs.readFileSync('../python_tracker/results.json');
   data = JSON.parse(contents);
-  console.log('Data reloaded');
+  console.log('Results reloaded');
 }
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  res.send('Welcome to the server!');
 });
 
 app.get('/results', (req, res) => {
