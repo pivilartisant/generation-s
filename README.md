@@ -1,4 +1,5 @@
 # generation-s
+![Generation(s) logo](./readmeAssets/generations.svg)
 
 ### 1. Introduction
 
