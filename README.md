@@ -64,7 +64,7 @@ then push the changes to the branch using the command :
 
 After that you can create a pull request on the repo (see picture) :
 
-![Create New Branch Screen](./readmeAssets/createPR.png)
+![Create New Branch Screen](./readmeAssets/createPr.png)
 
 than follow the instructions and wait for the pull request to be merged.
 
