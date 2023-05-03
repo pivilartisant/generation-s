@@ -61,3 +61,17 @@ then commit the changes using the command :
 
 then push the changes to the branch using the command :
 ` git push `
+
+After that you can create a pull request on the repo (see picture) :
+
+![Create New Branch Screen](./readmeAssets/createPR.png)
+
+than follow the instructions and wait for the pull request to be merged.
+
+![Create New Branch Screen](./readmeAssets/prInstructions.png)
+
+![Create New Branch Screen](./readmeAssets/wait4Merge.png)
+
+=> If you struggle with github & open source collaboration we recommend the very good : 
+
+https://github.com/pivilartisant/open-pixel-art
