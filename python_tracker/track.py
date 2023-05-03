@@ -18,8 +18,6 @@ results = {
     'section3': 0
 }
 
-write_results = False
-
 while True:
     # Read a frame from the camera
     ret, frame = cap.read()
@@ -31,7 +29,7 @@ while True:
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # Detect faces in the frame using the Haar Cascade model
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=10)
 
     # Initialize section counts to 0
     section_counts = [0, 0, 0]
@@ -64,14 +62,9 @@ while True:
     # Display the frame
     cv2.imshow('frame', frame)
 
-    # Write the results to a JSON file if the 'r' key is pressed
-    if cv2.waitKey(1) & 0xFF == ord('r'):
-        write_results = True
-
-    if write_results:
-        with open('results.json', 'w') as f:
-            json.dump(results, f)
-        write_results = False
+    # Write the results to a JSON file
+    with open('results.json', 'w') as f:
+        json.dump(results, f)
 
     # Exit the loop if the 'q' key is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
