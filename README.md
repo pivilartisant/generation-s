@@ -94,4 +94,4 @@ After that, you can create a pull request on the repo:
 
 If you struggle with GitHub and open-source collaboration, we recommend this resource:
 
-- https://github.com/pivilartisant/open-pixel-art.
+- https://github.com/twilio-labs/open-pixel-art
