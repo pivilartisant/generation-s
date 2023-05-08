@@ -6,6 +6,9 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Open the default camera
 cap = cv2.VideoCapture(0)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+
 
 # Define the width and height of each section
 section_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH) / 3
