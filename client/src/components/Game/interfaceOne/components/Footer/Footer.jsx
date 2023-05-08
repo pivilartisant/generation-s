@@ -1,20 +1,18 @@
-import { ArtistList } from "./ArtistList"
 import "./footer.css"
 
 export function Footer (props){
 
-    const args = {
-        artists: [
-          { id: 1, name: "HAMZA" },
-          { id: 2, name: "SCH" },
-          { id: 3, name: "DAMSO" },
-        ],
-      };
-      
-
+  const artists = props.artists.map(artist => {
+    return(
+      <div key={artist.id} className="artist-container">
+        <p className="artist-name">{artist.name}</p>
+    </div>
+    ) 
+})
+    
     return (
         <div className="footer">
-            <ArtistList {...args}/>
+            {artists}
         </div>
     )
 }
