@@ -1,0 +1,70 @@
+.time-progress{
+  display: flex;
+  width: 160px;
+  padding: 5px 10px;
+  border:  solid 1px white;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+}
+
+.progress-range {
+  -webkit-appearance: none; /* Removes default styling */
+  width: 300px; /* Sets the width of the range slider */
+  height: 6px; /* Sets the height of the range slider */
+  background-color: #ffffff; /* Sets the background color of the range slider */
+  outline: none; /* Removes the outline on the range slider */
+  transition: opacity 0.2s ease-in-out; /* Adds a transition effect to the opacity */
+  border-radius: 5px; /* Adds rounded corners to the range slider */
+  display: none;
+}
+
+/* Styles the thumb */
+.progress-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Removes default styling */
+  width: 14px; /* Sets the width of the thumb */
+  height: 14px; /* Sets the height of the thumb */
+  background-color: #FFFFFF; /* Sets the background color of the thumb */
+  border-radius: 50%; /* Makes the thumb circular */
+  border: 2px solid #FFFFFF; /* Adds a border to the thumb */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow to the thumb */
+}
+
+/* Styles the thumb for Firefox */
+.progress-range::-moz-range-thumb {
+  width: 14px; /* Sets the width of the thumb */
+  height: 14px; /* Sets the height of the thumb */
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles the track */
+.progress-range::-webkit-slider-runnable-track {
+  height: 6px; /* Sets the height of the track */
+  background-color: #FFFFFF; /* Sets the background color of the track */
+  border-radius: 5px; /* Adds rounded corners to the track */
+}
+
+/* Styles the track for Firefox */
+.progress-range::-moz-range-track {
+  height: 6px; /* Sets the height of the track */
+  background-color: #FFFFFF; /* Sets the background color of the track */
+  border-radius: 5px; /* Adds rounded corners to the track */
+}
+
+/* Styles the progress bar */
+.progress-range::-webkit-progress-value {
+  height: 8px; /* Sets the height of the progress bar */
+  background-color: #FFFFFF; /* Sets the background color of the progress bar */
+  border-radius: 5px; /* Adds rounded corners to the progress bar */
+}
+
+/* Styles the progress bar for Firefox */
+.progress-range::-moz-progress-bar {
+  height: 8px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}

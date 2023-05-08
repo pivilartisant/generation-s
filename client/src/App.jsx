@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-import { CheckValidation } from './components/CheckValidation'
-import { Game } from './components/Game/Game'
-import { AudioPlayer } from './components/audioPlayer/AudioPlayer'
+// import { CheckValidation } from './Pages/CheckValidation'
+import { Game } from './Pages/Game/Game'
+import { Deck } from './Pages/Deck/Deck'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <Router>
         <Routes>
           
-          <Route path="/interface" element={<AudioPlayer  />} />
+          <Route path="/deck" element={<Deck  />} />
           <Route path="/game" element={ <Game />} />
         </Routes>
     </Router>

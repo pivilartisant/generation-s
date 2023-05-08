@@ -1,0 +1,10 @@
+.play-button-container{
+    position: relative;
+    width: fit-content;
+    padding: 20px 40px;
+}
+
+.play-button{
+    width: 40px;
+    z-index: 1;
+}

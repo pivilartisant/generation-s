@@ -1,0 +1,10 @@
+
+.turnable{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+    height: 100%;
+    background-color:#010101;
+    z-index: 0;
+}
