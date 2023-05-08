@@ -1,0 +1,37 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:20px;
+    border-bottom: 1px solid white;
+    height: fit-content;
+    font-size: 40px;
+}
+
+.hints {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hint {
+    animation: slide-in 30s ease-out;
+
+  }
+
+  .hint {
+    animation: slide-in 30s ease-out;
+    
+  }
+  
+  @keyframes slide-in {
+    from {
+ 
+      opacity: 0;
+    }
+    to {
+
+      opacity: 1;
+    }
+  }
+  
