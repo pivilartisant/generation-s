@@ -1,35 +1,38 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef, useCallback } from 'react';
 import playButton from "../../../../../assets/playBtn.svg"
 import pauseButton from "../../../../../assets/pauseBtn.svg"
 import "./playButton.css";
 
 export function PlayButton ({...props}) {
+    let { audioRef, setTimeProgress, timeProgress } = props;
 
-    console.log(props.mp3src)
-    console.log(props.audioRef)
-    const [playing, setPlaying] = useState(true)
+    const [playing, setPlaying] = useState(false)
+    const playAnimationRef = useRef();
 
-      useEffect(() => {
-    if (playing) {
-      props.audioRef.current.play();
-    } else {
-      props.audioRef.current.pause();
-    }
-    
-    }, [playing, props.audioRef]);
+    const repeat = useCallback(() => {
+        const currentTime = audioRef.current.currentTime;
+        setTimeProgress(currentTime);
+        playAnimationRef.current = requestAnimationFrame(repeat);
+    }, []);
+
+    useEffect(() => {
+      if (playing) {
+        audioRef.current.play();
+        playAnimationRef.current = requestAnimationFrame(repeat);
+      } else {
+        audioRef.current.pause();
+        cancelAnimationFrame(playAnimationRef.current);
+      }
+    }, [playing, audioRef, repeat]);
 
     const play = () => {
         setPlaying(!playing)
-        console.log(playing)
-        console.log(props.mp3src)
       };
     
         return (
             <div className="play-button-container" onClick={play}>
-                <img src={!playing ? pauseButton : playButton} className="play-button" alt="Play Button"/>
+                <img src={playing ? pauseButton : playButton} className="play-button" alt="Play Button"/>
             </div>
         )
-}
-
-    // const audio = props.audioRef.current;
+};
 
