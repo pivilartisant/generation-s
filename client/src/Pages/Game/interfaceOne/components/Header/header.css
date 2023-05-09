@@ -2,11 +2,22 @@
     display:flex;
     justify-content:space-between;
     align-items: center;
-    padding:20px;
+    padding:10px;
     border-bottom: 1px solid white;
     height: fit-content;
-    font-size: 40px;
+    font-size: 20px;
+    animation: border-animation 10s infinite;
 }
+
+@keyframes border-animation {
+  0% { border-color: white; }
+  20% { border-color: #8FA1AD; }
+  40% { border-color: #9DB894; }
+  60% { border-color: #D44973; }
+  80% { border-color: #9F5B56; }
+  100% { border-color: #305D67; }
+}
+
 
 .hints {
     display: flex;
