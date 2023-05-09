@@ -2,7 +2,7 @@
     height: 100%;
     border-top: 1px solid white;
     display: flex;
-    animation: border-animation 10s infinite;
+    animation: border-animation 10s infinite alternate;
 }
 
 @keyframes border-animation {
