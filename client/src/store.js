@@ -1,11 +1,31 @@
 import { create } from 'zustand'
+import { devtools, persist } from 'zustand/middleware'
 
-const useValidFnStore = (set) => ({
-  choice: {isValid : false},
-  setChoice : (isValid) => set((store)=>({choice : {isValid}}))
-
+const gameStore = (set) => ({
+  gameState: [
+    {
+      playing: false,
+    },
+    {
+      valid: false,
+    }
+  ],
+  setState: set((state) => ({ 
+    gameState: [
+      {
+        playing: !state.gameState[0].playing,
+      },
+      {
+        valid: !state.gameState[1].valid,
+      },
+    ],
+  })),
 })
 
+const useGameStore = create(
+  devtools(
+    persist(
+      gameStore, { name: 'game' }
+  )));
 
-
-export const useStore = create(useValidFnStore)
+export default useGameStore 
