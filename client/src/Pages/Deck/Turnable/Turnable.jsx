@@ -11,7 +11,7 @@ export function Turnable({...props}){
         <Info {...props}/>
         </div>
         <div className="middle-child">
-        <Vinyl size={380}/>
+            {props.vinyl}
         </div>
         <div>
         <PlayButton {...props}/>
