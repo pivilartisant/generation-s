@@ -5,10 +5,12 @@ import { Loader, mp3src1, mp3src2 } from "./Loader/Loader"
 import { Vinyl } from "./Turnable/Vinyl/Vinyl";
 import hamza from "./Turnable/Vinyl/hamza.png"
 import shinibi from "./Turnable/Vinyl/shinibi.png"
-
 import "./deck.css"
-export function Deck (){
-    
+
+export function Deck ({...props}){
+
+console.log(props.gameState)
+
 const audioRefA = useRef();
 const audioRefB = useRef();
 
@@ -36,7 +38,6 @@ const deckA = {
     vinyl: <Vinyl size={480} src={shinibi} rotation={rotationA}/>,
     setRotation: setRotationA,
     rotation: rotationA,
-    
 }
 
 const deckB = {
@@ -53,9 +54,10 @@ const deckB = {
         <div className="deck">
             {/* Loader in middleware for controlling audio */}
             <Loader {...AB} />
-            <Turnable mp3src={mp3src1} {...deckA}/>
+            <Turnable mp3src={mp3src1} {...deckA} gameState={props.gameState} toggleGameState={props.toggleGameState}/>
             <Mixer/>
             <Turnable mp3src={mp3src2} {...deckB}/>
+            {/* <button onClick={handleClick}>Toggle Game State</button> */}
         </div>
     )
 }

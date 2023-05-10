@@ -4,6 +4,7 @@ import pauseButton from "../../../../../assets/pauseBtn.svg"
 import "./playButton.css";
 
 export function PlayButton ({...props}) {
+
     let { audioRef, setTimeProgress, setRotation, rotation } = props;
 
     const [playing, setPlaying] = useState(false)
@@ -18,8 +19,10 @@ export function PlayButton ({...props}) {
     useEffect(() => {
       if (playing) {
         audioRef.current.play();
+        console.log(props.gameState)
         playAnimationRef.current = requestAnimationFrame(repeat);
       } else {
+        console.log(props.gameState)
         audioRef.current.pause();
         cancelAnimationFrame(playAnimationRef.current);
       }
@@ -28,8 +31,8 @@ export function PlayButton ({...props}) {
     const play = () => {
         setPlaying(!playing)
         setRotation(!rotation)
+        props.toggleGameState();
       };
-    
         return (
             <div className="play-button-container" onClick={play}>
                 <img src={playing ? pauseButton : playButton} className="play-button" alt="Play Button"/>

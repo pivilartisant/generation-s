@@ -4,7 +4,6 @@ import { PlayButton } from "../Components/Buttons/PlayButton/PlayButton";
 import "./turnable.css";
 
 export function Turnable({...props}){
-
     return (
       <div className="turnable">
         <div>
