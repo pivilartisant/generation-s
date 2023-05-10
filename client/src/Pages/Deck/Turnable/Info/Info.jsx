@@ -1,15 +1,14 @@
-import { ProgressBar } from "./Progressbar/ProgressBar"
-import { useRef,useState } from "react";
+import { ProgressBar } from "./Progressbar/ProgressBar";
+import { useRef, useState } from "react";
 
-export function Info({...props}){
+export function Info({ ...props }) {
+  const progressBarRef = useRef();
 
-    const progressBarRef = useRef();
-
-    return (
-        <div className="info">
-           <p>Track Title</p>
-            <p>Track Author</p>
-            <ProgressBar {...props} progressBarRef={progressBarRef}/>
-        </div>
-    );
-};
+  return (
+    <div className="info">
+      {/* <p>Track Title</p>
+            <p>Track Author</p> */}
+      <ProgressBar {...props} progressBarRef={progressBarRef} />
+    </div>
+  );
+}
