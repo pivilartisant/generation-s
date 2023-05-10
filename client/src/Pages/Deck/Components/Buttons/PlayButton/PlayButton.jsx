@@ -4,7 +4,7 @@ import pauseButton from "../../../../../assets/pauseBtn.svg"
 import "./playButton.css";
 
 export function PlayButton ({...props}) {
-    let { audioRef, setTimeProgress, timeProgress } = props;
+    let { audioRef, setTimeProgress, setRotation, rotation } = props;
 
     const [playing, setPlaying] = useState(false)
     const playAnimationRef = useRef();
@@ -27,6 +27,7 @@ export function PlayButton ({...props}) {
 
     const play = () => {
         setPlaying(!playing)
+        setRotation(!rotation)
       };
     
         return (
