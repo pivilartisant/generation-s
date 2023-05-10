@@ -1,24 +1,24 @@
-
-.turnable{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 35%;
-    height: 100%;
-    z-index: 0;
+.turnable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33%;
+  height: 100%;
+  z-index: 0;
+  padding: 40px;
 }
 
-.middle-child{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 1;
+.middle-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
 }
 
-.album-cover{
-    border-radius: 50%;
+.album-cover {
+  border-radius: 50%;
 }
 /* 
 .vinyl{

@@ -1,21 +1,25 @@
+@font-face {
+  font-family: "NeueMedium";
+  src: url("../../../assets/fonts/NeueHaasDisplayMediu.ttf") format("truetype");
+  /* You can add more src declarations for different font file formats */
+}
 
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
- }
+  box-sizing: border-box;
+}
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
   min-width: 100vw;
   min-height: 100vh;
+  font-family: NeueMedium;
 }
 
-body{
+body {
   overflow: hidden;
   min-width: 100vw;
   min-height: 100vh;
 }
-
-
