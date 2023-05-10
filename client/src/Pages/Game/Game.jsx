@@ -1,11 +1,18 @@
 import { InterfaceOne } from "./interfaceOne/InterfaceOne";
+import { useEffect, useState } from 'react';
 
-export function Game () {
-
-    //The first interface will need a header, a footer and three artists components
-    // -> Interface one will receive a certain number of args related to the current artist roster (3)
-    //The second interface will need a header, a footer and one banner component
+export function Game({...props}) {
+    useEffect(() => {
+      console.log('Game state changed:', props.gameState);
+    }, [props.gameState]);
+  
     return (
-       <InterfaceOne/>
-    )
-}
+      <>
+        {props.gameState ? (
+          <InterfaceOne {...props} />
+        ) : (
+          <div>Hit it Dj</div>
+        )}
+      </>
+    );
+  }

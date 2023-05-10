@@ -2,24 +2,11 @@ import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 
 const gameStore = (set) => ({
-  gameState: [
-    {
-      playing: false,
-    },
-    {
-      valid: false,
-    }
-  ],
-  setState: set((state) => ({ 
-    gameState: [
-      {
-        playing: !state.gameState[0].playing,
-      },
-      {
-        valid: !state.gameState[1].valid,
-      },
-    ],
-  })),
+  gameState: true,
+  
+  toggleGameState: () => {
+    console.log('Toggling game state');
+    set((state) => ({ gameState: !state.gameState}))}
 })
 
 const useGameStore = create(
