@@ -5,6 +5,18 @@
 
 Generation(s) is an open-source interactive application for musical exploration.
 
+### 1.5 Pitch
+
+"Generation(s)" is an interactive application as well as a collaborative and playful game. 
+
+Starting from a sample, retrace the history of rap by navigating back and forth between the past and the present. 
+
+The "Generation(s)" application is developed following the open-source model, meaning that anyone can share their musical references and write their own history of rap. 
+
+This also implies that users can freely study, modify, and enhance the software, and even redistribute it to others. Open source is often associated with a community of developers working to create a tool that can be used by everyone. 
+
+In this case, the members of this team are at the origin of the "Generation(s)" application, which is now published and available for download on GitHub. Since this application is based on the open-source principle, everyone can propose improvements, changes, and suggestions. The "Generation(s)" application is thus constantly evolving and becoming more comprehensive thanks to user feedback
+
 ### 2. Installation
 
 To collaborate, clone the repository or download the .ZIP file to experiment in a local setting.
