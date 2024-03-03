@@ -1,8 +1,6 @@
 # generation-s
 ![Generation(s) logo](./readmeAssets/generations.svg)
 
-Here is a revised version of the contribution guide with bullet points and proper spacing:
-
 ### 1. Introduction
 
 Generation(s) is an open-source interactive application for musical exploration.
